@@ -1,0 +1,22 @@
+
+import random
+
+price = random.randint(1, 10)
+
+score = 100
+attempts = 0
+
+print("Guess the right price! The price is a number between 1 and 10 inclusive.")
+
+while True:
+    number = int(input())
+    attempts += 1
+    if number < price:
+        print("The right price is higher")
+    if number > price:
+        print("The right price is lower")
+    if number == price:
+        print(f"Congratulations, you found the right price {price} in {attempts} attempts, your score is {int(score / attempts)}!")
+        break
+
+print("Game over")
