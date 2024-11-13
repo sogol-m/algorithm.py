@@ -1,0 +1,22 @@
+def insersort(arr):
+    n=len(arr) #lenth of array
+    if n<=1:
+        return
+    for i in range (1,n):#iterate over the array and set key
+        key=arr[i]
+        j=i-1
+        while j>=0 and key<arr[j]:#move element if greater than key
+            arr[j+1]=arr[j] #shift element to the right
+            j-=1
+            arr[j+1]=key#insert key the correct position
+arr1=[12,7,14,10,13,9]
+insersort(arr1)
+print("sorted array is :", arr1)
+
+
+
+
+
+
+
+
